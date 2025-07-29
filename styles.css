@@ -28,6 +28,9 @@ body {
   line-height: 1.5;
   color: hsl(234, 29%, 20%);
   background-color: hsl(234, 29%, 20%); /* #36384d from Figma */
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
 }
 
 .container {
