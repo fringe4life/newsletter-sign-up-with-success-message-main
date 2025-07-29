@@ -51,32 +51,30 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 24px 32px;
-  align-items: stretch;
+  padding: 1.5rem 2rem;
 }
 
 .form-content {
   padding: 4.4375rem 4rem 4.4375rem 0; /* 71px top/bottom, 64px right, 0 left */  
   max-width: 23.5rem; /* 376px */
+  display: grid;
+  gap: 2rem;
 }
 
 .title {
   font-size: 3.5rem; /* 56px */
   font-weight: 700;
   color: hsl(234, 29%, 20%);
-  margin-bottom: 1.5rem; /* 24px */
   line-height: 1.1;
 }
 
 .description {
   font-size: 1rem; /* 16px */
   color: hsl(234, 29%, 20%);
-  margin-bottom: 1.875rem; /* 30px */
 }
 
 .features-list {
   list-style: none;
-  margin-bottom: 2.5rem; /* 40px */
 }
 
 .feature-item {
@@ -103,14 +101,12 @@ body {
 
 /* Form styles */
 .email-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.5rem; /* 24px */
 }
 
 .input-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 0.5rem; /* 8px */
   position: relative;
 }
@@ -122,14 +118,14 @@ body {
 }
 
 .email-input {
-  padding: 1.125rem 1.5rem; /* 18px 24px */
+  padding: 1rem 1.5rem; /* 16px 24px */
   border: 0.0625rem solid hsl(0, 0%, 58%); /* 1px */
   border-radius: 0.5rem; /* 8px */
   font-size: 1rem; /* 16px */
   font-family: inherit;
   color: hsl(234, 29%, 20%);
   background-color: hsl(0, 0%, 100%);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .email-input::placeholder {
@@ -154,8 +150,7 @@ body {
   font-weight: 700;
   display: none;
   position: absolute;
-  right: 0;
-  top: 0;
+  inset: 0 0 auto auto;
 }
 
 .error-message.show {
@@ -163,8 +158,8 @@ body {
 }
 
 .subscribe-btn {
-  padding: 1.125rem 1.5rem; /* 18px 24px */
-  background: linear-gradient(135deg, hsl(234, 29%, 20%), hsl(235, 18%, 26%));
+  padding: 1rem 2rem; /* 18px 24px */
+  background: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 0.5rem; /* 8px */
@@ -172,7 +167,7 @@ body {
   font-weight: 700;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
 }
 
@@ -219,16 +214,13 @@ body {
 }
 
 .success-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem; /* 24px */
+  display: grid;
+  gap: 2rem; 
 }
 
 .success-icon {
   width: 4rem; /* 64px from Figma */
-  height: 4rem; /* 64px from Figma */
-  margin-bottom: 0.5rem; /* 8px */
+  aspect-ratio: 1;
   background: linear-gradient(135deg, hsl(16, 100%, 66%), hsl(346, 100%, 66%)); /* #ff6a3a to #ff527b from Figma */
   border-radius: 50%;
   display: flex;
@@ -251,8 +243,8 @@ body {
 
 .dismiss-btn {
   width: 100%;
-  padding: 1.125rem 1.5rem; /* 18px 24px */
-  background: linear-gradient(135deg, hsl(234, 29%, 20%), hsl(235, 18%, 26%));
+  padding: 1rem 2rem; /* 18px 24px */
+  background: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 0.5rem; /* 8px */
@@ -260,9 +252,8 @@ body {
   font-weight: 700;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
-  margin-top: 0.5rem; /* 8px */
 }
 
 .dismiss-btn:hover {
@@ -312,7 +303,7 @@ body {
   .signup-form {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    max-width: 37.5rem; /* 600px */
+    gap: 40px;
   }
   
   .illustration {
@@ -321,6 +312,7 @@ body {
   
   .form-content {
     max-width: none;
+    padding: 0;
   }
   
   .title {
@@ -342,6 +334,7 @@ body {
     max-width: none;
     grid-template-rows: 17.5rem 1fr;
     padding:  42px 40px;
+    
   }
   
   .illustration {
@@ -350,6 +343,7 @@ body {
   
   .form-content {
     max-width: none;
+    
   }
   
   .title {
@@ -360,7 +354,7 @@ body {
     border-radius: 0;
     box-shadow: none;
     max-width: none;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,5 +411,5 @@ body {
 }
 
 .fade-in {
-  animation: --fadeIn 0.3s ease-out;
+  animation: --fadeIn 0.3s ease-in-out;
 } 

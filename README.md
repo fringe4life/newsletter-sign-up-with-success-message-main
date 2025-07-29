@@ -67,7 +67,7 @@ You can host your site using one of these solutions or any of our other trusted 
 
 We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please-in-out feel free to edit our template as much as you like.
 
 Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
@@ -86,14 +86,14 @@ There are multiple places you can share your solution:
 3. Share your solution on other social channels like LinkedIn.
 4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+We provide templates to help you share your solution once you've submitted it on the platform. Please-in-out do edit them and include specific questions when you're looking for feedback. 
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
 ## Got feedback for us?
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please-in-out email hi[at]frontendmentor[dot]io.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+This challenge is completely free. Please-in-out share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
