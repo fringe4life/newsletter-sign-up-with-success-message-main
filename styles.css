@@ -1,0 +1,429 @@
+/* Font declarations */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem; /* 16px */
+  line-height: 1.5;
+  color: hsl(234, 29%, 20%);
+  background-color: hsl(234, 29%, 20%); /* #36384d from Figma */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem; /* 24px */
+  min-height: 100vh;
+}
+
+/* Sign-up form styles */
+.signup-form {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2.25rem; /* 36px from Figma */
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.1); /* 20px 60px */
+  overflow: hidden;
+  max-width: 56.5rem; /* 904px from Figma */
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.form-content {
+  padding: 4rem 3.75rem; /* 64px 60px */
+  flex: 1;
+  max-width: 23.5rem; /* 376px from Figma */
+}
+
+.title {
+  font-size: 3.5rem; /* 56px */
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 1.5rem; /* 24px */
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 1rem; /* 16px */
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 1.875rem; /* 30px */
+}
+
+.features-list {
+  list-style: none;
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem; /* 16px */
+  margin-bottom: 0.875rem; /* 14px */
+  font-size: 1rem; /* 16px */
+  color: hsl(234, 29%, 20%);
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  width: 1.3125rem; /* 21px */
+  height: 1.3125rem; /* 21px */
+  flex-shrink: 0;
+  margin-top: 0.125rem; /* 2px */
+  background-color: hsl(4, 100%, 67%); /* #ff6155 from Figma */
+  border-radius: 50%;
+}
+
+/* Form styles */
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 24px */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px */
+  position: relative;
+}
+
+.email-label {
+  font-size: 0.75rem; /* 12px */
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+
+.email-input {
+  padding: 1.125rem 1.5rem; /* 18px 24px */
+  border: 0.0625rem solid hsl(0, 0%, 58%); /* 1px */
+  border-radius: 0.5rem; /* 8px */
+  font-size: 1rem; /* 16px */
+  font-family: inherit;
+  color: hsl(234, 29%, 20%);
+  background-color: hsl(0, 0%, 100%);
+  transition: all 0.3s ease;
+}
+
+.email-input::placeholder {
+  color: hsl(0, 0%, 58%);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: hsl(234, 29%, 20%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.email-input.error {
+  border-color: hsl(4, 100%, 67%); /* #ff6155 from Figma */
+  background-color: hsl(4, 100%, 67%, 0.1); /* #ffe7e6 from Figma */
+  color: hsl(4, 100%, 67%);
+}
+
+.error-message {
+  font-size: 0.75rem; /* 12px */
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.subscribe-btn {
+  padding: 1.125rem 1.5rem; /* 18px 24px */
+  background: linear-gradient(135deg, hsl(234, 29%, 20%), hsl(235, 18%, 26%));
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem; /* 8px */
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(4, 100%, 67%));
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 107, 107, 0.3); /* 8px 24px */
+  transform: translateY(-0.125rem); /* -2px */
+}
+
+.subscribe-btn:active {
+  transform: translateY(0);
+}
+
+.subscribe-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Illustration styles */
+.illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(16, 100%, 66%), hsl(346, 100%, 66%)); /* #ff6a3a to #ff527b from Figma */
+  padding: 1.5rem; /* 24px */
+  border-radius: 1rem; /* 16px from Figma */
+}
+
+.illustration-img {
+  width: 100%;
+  height: auto;
+  max-width: 25rem; /* 400px */
+}
+
+/* Success message styles */
+.success-message {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2.25rem; /* 36px from Figma */
+  box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.1); /* 20px 60px */
+  max-width: 31.5rem; /* 504px from Figma */
+  width: 100%;
+  padding: 3rem 2.5rem; /* 48px 40px */
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem; /* 24px */
+}
+
+.success-icon {
+  width: 4rem; /* 64px from Figma */
+  height: 4rem; /* 64px from Figma */
+  margin-bottom: 0.5rem; /* 8px */
+  background: linear-gradient(135deg, hsl(16, 100%, 66%), hsl(346, 100%, 66%)); /* #ff6a3a to #ff527b from Figma */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-title {
+  font-size: 3.5rem; /* 56px */
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+  line-height: 1.1;
+}
+
+.success-description {
+  font-size: 1rem; /* 16px */
+  color: hsl(234, 29%, 20%);
+  line-height: 1.6;
+}
+
+.dismiss-btn {
+  width: 100%;
+  padding: 1.125rem 1.5rem; /* 18px 24px */
+  background: linear-gradient(135deg, hsl(234, 29%, 20%), hsl(235, 18%, 26%));
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem; /* 8px */
+  font-size: 1rem; /* 16px */
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
+  margin-top: 0.5rem; /* 8px */
+}
+
+.dismiss-btn:hover {
+  background: linear-gradient(135deg, hsl(4, 100%, 67%), hsl(4, 100%, 67%));
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 107, 107, 0.3); /* 8px 24px */
+  transform: translateY(-0.125rem); /* -2px */
+}
+
+.dismiss-btn:active {
+  transform: translateY(0);
+}
+
+/* Attribution */
+.attribution {
+  font-size: 0.6875rem; /* 11px */
+  text-align: center;
+  padding: 1rem; /* 16px */
+  color: hsl(0, 0%, 58%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet styles */
+@media (max-width: 75rem) { /* 1200px */
+  .signup-form {
+    max-width: 50rem; /* 800px */
+  }
+  
+  .form-content {
+    padding: 3rem 2.5rem; /* 48px 40px */
+  }
+  
+  .title {
+    font-size: 3rem; /* 48px */
+  }
+  
+  .success-title {
+    font-size: 3rem; /* 48px */
+  }
+}
+
+@media (max-width: 64rem) { /* 1024px */
+  .signup-form {
+    flex-direction: column;
+    max-width: 37.5rem; /* 600px */
+  }
+  
+  .illustration {
+    order: -1;
+    padding: 2rem 1.5rem; /* 32px 24px */
+  }
+  
+  .form-content {
+    padding: 2.5rem 2rem; /* 40px 32px */
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 2.5rem; /* 40px */
+  }
+  
+  .success-title {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 48rem) { /* 768px */
+  .container {
+    padding: 0;
+    align-items: stretch;
+  }
+  
+  .signup-form {
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .illustration {
+    order: -1;
+    padding: 0;
+    border-radius: 0;
+    height: 17.75rem; /* 284px from Figma */
+  }
+  
+  .form-content {
+    padding: 2rem 1.5rem; /* 32px 24px */
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 2.5rem; /* 40px from Figma */
+  }
+  
+  .success-message {
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem; /* 32px 24px */
+  }
+  
+  .success-title {
+    font-size: 2.5rem; /* 40px from Figma */
+  }
+}
+
+@media (max-width: 23.4375rem) { /* 375px */
+  .form-content {
+    padding: 1.5rem 1rem; /* 24px 16px */
+  }
+  
+  .title {
+    font-size: 2rem; /* 32px */
+  }
+  
+  .success-message {
+    padding: 1.5rem 1rem; /* 24px 16px */
+  }
+  
+  .success-title {
+    font-size: 2rem; /* 32px */
+  }
+} 
+
+/* Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-0.5rem); }
+  20%, 40%, 60%, 80% { transform: translateX(0.5rem); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+} 
