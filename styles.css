@@ -57,7 +57,7 @@ body {
 .form-content {
   padding: 4rem 3.75rem; /* 64px 60px */
   flex: 1;
-  max-width: 23.5rem; /* 376px from Figma */
+  /* max-width: 23.5rem; 376px from Figma */
 }
 
 .title {
